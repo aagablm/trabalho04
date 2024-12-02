@@ -95,4 +95,5 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['nome']) && isset($_POS
         ?>
     </div>
 </body>
+<footer><i>Desenvolvido por Ana Gabriela Lima e Laisa Garlini</i></footer>
 </html>
