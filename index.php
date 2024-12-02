@@ -8,20 +8,16 @@ use Classes\RelatorioBase;
 use Classes\RelatorioBorda;
 use Classes\RelatorioCabecalho;
 
-// Criando instâncias para os padrões Singleton, Observer e Decorator
 $registro = RegistroUsuarios::getInstance();
 $notificador = new NotificadorEmail();
 
-// Verifica se o formulário de registro foi enviado
 if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['nome']) && isset($_POST['email'])) {
     $nome = $_POST['nome'];
     $email = $_POST['email'];
 
-    // Cria o usuário
     $usuario = new Usuario($nome, $email);
     $usuario->adicionarObservador($notificador);
 
-    // Registra o usuário e notifica
     $registro->adicionarUsuario($nome, $email);
     $usuario->notificarObservadores();
 }
@@ -47,7 +43,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['nome']) && isset($_POS
 <body>
     <h1>Sistema de Registro de Usuários</h1>
     
-    <!-- Formulário de registro -->
     <div class="form-container">
         <h2>Registrar Novo Usuário</h2>
         <form method="POST">
@@ -59,7 +54,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['nome']) && isset($_POS
         </form>
     </div>
 
-    <!-- Lista de Usuários -->
     <div class="users-list">
         <h2>Usuários Registrados</h2>
         <table>
@@ -71,7 +65,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['nome']) && isset($_POS
             </thead>
             <tbody>
                 <?php
-                // Exibe os usuários registrados
                 $usuarios = $registro->listarUsuarios();
                 foreach ($usuarios as $usuarioRegistrado) {
                     echo "<tr><td>" . htmlspecialchars($usuarioRegistrado['nome']) . "</td><td>" . htmlspecialchars($usuarioRegistrado['email']) . "</td></tr>";
@@ -81,7 +74,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['nome']) && isset($_POS
         </table>
     </div>
 
-    <!-- Gerar Relatório -->
     <div class="report-section">
         <h2>Gerar Relatório</h2>
         <?php
