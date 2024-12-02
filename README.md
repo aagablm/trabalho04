@@ -1,9 +1,7 @@
 # Trabalho 04 - Design Patterns
 
-**Linguagem de Programação e Paradigmas**  
-Prof. Esp. Ademar Perfoll Junior  
-**Sistemas de Informação**  
-
+> Trabalho desenvolvido na matéria de Linguagem de Programação e Paradigmas do curso de Sistemas de Informação da UNIDAVI
+ 
 ## Objetivo do Projeto
 
 O objetivo deste projeto é aplicar pelo menos dois padrões de design em um sistema simples de registro de usuários, relatórios e notificações. O sistema será modular e flexível, permitindo a troca de comportamentos em tempo de execução. Para cada um dos padrões escolhidos, você terá que pesquisar sobre o padrão, entender como ele se aplica ao seu caso específico e implementar a solução de forma que atenda aos requisitos do sistema.
@@ -44,7 +42,7 @@ O objetivo deste projeto é aplicar pelo menos dois padrões de design em um sis
    ```
 
 4. **Acesse o projeto no navegador:**
-  Abra o navegador e acesse [http://localhost/conversor/index.html.](http://localhost:8000)
+  Abra o navegador e acesse [http://localhost/trabalho04/index.html.](http://localhost:8000)
 
 
 ## 🤝 Desenvolvedoras
