@@ -15,12 +15,15 @@ O objetivo deste projeto é aplicar pelo menos dois padrões de design em um sis
 - **Problema Resolvido**: Criar um sistema de registro de usuários garantindo que apenas uma instância da classe de registro seja criada durante toda a execução do sistema.
 - **Pesquisa e Exploração**: A implementação foi baseada em [thread-safe Singleton](https://en.wikipedia.org/wiki/Singleton_pattern#Thread-safe_singletons) para garantir que, mesmo em acessos simultâneos, a classe de registro de usuários seja única.
 - **Testes**: Testamos se a instância criada é única e validamos o funcionamento da solução em situações de múltiplos acessos simultâneos.
+![image](https://github.com/user-attachments/assets/0af2b2f9-220e-431f-bc5d-7a32b32ae518)
+
 
 ### 2. Padrão **Decorator**
 
 - **Problema Resolvido**: Criar um sistema de geração de relatórios onde os relatórios podem ser dinamicamente modificados com diferentes funcionalidades de formatação, como bordas, cabeçalhos e mudanças de cor.
 - **Pesquisa e Exploração**: O padrão Decorator foi aplicado para modificar os relatórios de forma modular e flexível, sem alterar o código original de geração dos relatórios.
 - **Testes**: Testamos como os diferentes decoradores interagem entre si, garantindo que a formatação do relatório funcione conforme o esperado.
+![image](https://github.com/user-attachments/assets/5036f972-c12e-48f5-9345-f039cb1d5433)
 
 ---
 
